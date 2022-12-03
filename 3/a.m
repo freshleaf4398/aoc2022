@@ -2,10 +2,10 @@ clearvars
 load input
 
 for idx = 1 : length(input)
+    a = num2cell(char(input(idx)));
+    comp1 = string(a(1:length(a)/2));
+    comp2 = string(a(length(a)/2+1:length(a)));
     b = [];
-    mausholds = num2cell(char(input(idx)));
-    comp1 = string(mausholds(1:length(mausholds)/2));
-    comp2 = string(mausholds(length(mausholds)/2+1:length(mausholds)));
     for jdx = 1 : length(comp1)
         for kdx = 1 : length(comp2)
             if comp1(jdx)==comp2(kdx)
@@ -19,10 +19,10 @@ disp(['solution problem 1 : ',num2str(sum(c))])
 
 clearvars -except input
 for idx = 1 : length(input)/3
-    b = [];
     comp1 = string(num2cell(char(input(idx*3-2))));
     comp2 = string(num2cell(char(input(idx*3-1))));
     comp3 = string(num2cell(char(input(idx*3))));
+    b = [];
     for jdx = 1 : length(comp1)
         for kdx = 1 : length(comp2)
             for ldx = 1 : length(comp3)
