@@ -13,12 +13,7 @@ for idx = 1 : length(input)
             end
         end
     end
-    shroom(idx) = b(1);
-    if isstrprop(shroom(idx),'lower')
-        c(idx) = double(char(shroom(idx)))-96;
-    else
-        c(idx) = double(char(shroom(idx)))-38;
-    end
+    c(idx) = char2num(b(1));
 end
 disp(['solution problem 1 : ',num2str(sum(c))])
 
@@ -37,11 +32,14 @@ for idx = 1 : length(input)/3
             end
         end
     end
-    shroom(idx) = b(1);
-     if isstrprop(shroom(idx),'lower')
-        c(idx) = double(char(shroom(idx)))-96;
-    else
-        c(idx) = double(char(shroom(idx)))-38;
-    end
+    c(idx) = char2num(b(1));
 end
 disp(['solution problem 2 : ',num2str(sum(c))])
+
+function y = char2num(x)
+    if isstrprop(x,'lower')
+        y = double(char(x))-96;
+    else
+        y = double(char(x))-38;
+    end
+end
