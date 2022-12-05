@@ -14,8 +14,7 @@ for idx = 1 : length(input2)
     box2move = cart{cartindex_before}(1:number_box); %CrateMover 9000
     cart{cartindex_before}(1:number_box) = [];
     
-    b = cart{cartindex_after};
-    b = flip(b);
+    b = flip(cart{cartindex_after});
     c = length(b);
     
     for jdx = 1 : number_box
@@ -43,8 +42,7 @@ for idx = 1 : length(input2)
     box2move = flip(cart{cartindex_before}(1:number_box)); %CrateMover 9001
     cart{cartindex_before}(1:number_box) = [];
     
-    b = cart{cartindex_after};
-    b = flip(b);
+    b = flip(cart{cartindex_after});
     c = length(b);
     
     for jdx = 1 : number_box
